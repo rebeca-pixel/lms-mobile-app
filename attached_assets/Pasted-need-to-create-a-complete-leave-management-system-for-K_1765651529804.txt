@@ -1,0 +1,38 @@
+need to create a complete leave management system for Knockturn private limited add the log as the image given  in black and blue radient with aproffesional output using GSAP and hoover efftect and light efftect giving everything i need Step,Prompt to Submit to Bolt.ai
+1.1 (Setup),"""Initialize a new full-stack application for a Leave Management System (LMS). Use a modern framework (like Next.js/React and Tailwind CSS for the UI) and integrate a database/authentication solution (like Supabase or Bolt's built-in database) for secure login. Create two primary user roles: Admin and Employee."""
+1.2 (Auth UI),"""Create a single Login Page where users enter an Employee Code and Password. Also, create a Sign-Up Page for new employees (accessible by Admin/HR only) that requires Employee Name, Employee Code, Email, and Password. Implement role separation based on the Employee Code prefix: codes starting with 'A' (A0001, A0002, A0003) are Admin, and codes starting with 'E' (E0041, E0042, etc.) are Employee."""
+1.3 (Data Seeding),"""Populate the database with the initial user list. Ensure the role is correctly assigned: Admins (A0001, A0002, A0003) and Employees (E0041 to E0052, plus one for FAREETHA with a new code like E0053).Step,Prompt to Submit to Bolt.ai
+2.1 (Employee Dashboard),"""Create the Employee Dashboard (/employee/dashboard). This page should have a clear sidebar with links for: Apply Leave, Leave History, Profile, and Leave Status."""
+2.2 (Apply Leave Form),"""Develop the Apply Leave page. It must include fields for: Leave Type Selection (Casual, Sick, Study, LWP, Earned), Start Date, End Date, Leave Taken For (e.g., Full Day/Half Day), Description, and an Upload File (optional attachment). Submitting this form should save the request to the database with a 'Pending' status."""
+2.3 (Status & History),"""Build the Leave Status page to show all pending requests and the Leave History page to show all past requests (Approved/Rejected/Cancelled)."""
+2.4 (Productivity Profile),"""Update the Profile page to display: Leave taken for the month and Worked Days vs. a target of 25 days/month. CRITICAL: If worked days are below 25, the number must be displayed in RED color."""Step,Prompt to Submit to Bolt.ai
+3.1 (Admin Dashboard),"""Create the Admin Dashboard (/admin/dashboard) with navigation links: Dashboard, Department, View Leave, Charts, Approved Leave, Rejected Leave. Display the following counts on the main Dashboard page: Total Employee, Total Department, Pending Leave, Approved Leaves, Rejected Leaves."""
+3.2 (CRUD Functionality),"""Implement full CRUD (Add, View, Edit, Delete) functionality for Employees and Departments. The Employee management page should be where Admins can modify details, including role assignment."""
+3.3 (View Leave & Approval Logic),"""Develop the View Leave page. It must list all 'Pending' requests, displaying: Employee Name, Code, Reason, Attached File, and the option to Approve or Reject. Approving/Rejecting must update the leave status in the database and automatically change the status on the Employee's 'Leave Status' page (real-time update)."""
+3.4 (Search Bar),"""Add a prominent Search Panel at the top of the Admin dashboard and on the 'View Leave' page, allowing filtering by Employee Name, Employee Code, and Department."""Step,Prompt to Submit to Bolt.ai
+4.1 (Specialized Views),"""Create the Approved Leave page (showing reason for approval and attachment) and the Rejected Leave page (capturing and showing the reason for rejection). Also, create the Department View showing how many employees in that department have taken leave, the reason, attachment, Reporting Manager, and HR name."""
+4.2 (Charts & Analytics),"""On the Charts page, generate data visualizations (using a library like Recharts or similar) for: Bar Chart for Leave Type Distribution, Pie Chart for Monthly Productivity (worked vs. target days), and a Line Chart for monthly leave trends."""
+4.3 (Audit Trail),"""Implement a crucial feature: a status/log display on all relevant Admin and Employee pages (View Leave, Approved, Rejected, Leave Status) to show when the leave was Viewed, Approved, or Rejected and by whom (Admin Name/Code). This ensures a full audit trail."""and logout option in every page Admin Code (EMP CODE),Name (EMPLOYEE NAME),Role
+A0001,SAM PARKESH,Admin
+A0002,LEO CLESTINE,Admin
+A0003,SUJI,Admin Employee Code (EMP CODE),Name (EMPLOYEE NAME),Role
+E0041,MOHAN RAJ C,Employee
+E0042,YUVARAJ S,Employee
+E0043,ATMAKUR RAJESH,Employee
+E0032,SIVARAM C,Employee
+E0040,UMAR FAROOQUE,Employee
+E0028,KAALIPUSHPA R,Employee
+E0035,DENNIS RAJU,Employee
+E0009,RANJITH,Employee
+E0044,PRIYA P,Employee
+E0045,RATCHITHA,Employee
+E0047,Samyuktha S,Employee
+E0046,Rebecasuji.A,Employee
+E0048,DurgaDevi E,Employee
+E0050,ZAMEELA BEGAM N.,Employee
+E0051,ARUN KUMAR V. (E0051 assumed),Employee
+E0052,D K JYOTHSNA PRIYA,Employee
+E0049,P PUSHPA,Employee
+-,FAREETHA,Employee (No Code) thses can only login no other can Crucial Constraint:
+
+For login, only the specific Employee Codes and Names listed below must be permitted in the system. No other data should be granted login access initially. bulit it in proffesional way .make it mostly evrything frontend like i need to depolye in vercel depolyemnt app like that

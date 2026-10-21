@@ -1,0 +1,116 @@
+/* Premium Dashboard Action Buttons */
+
+.dashboard-actions {
+    display: flex;
+    gap: 12px;
+    align-items: center;
+}
+
+.btn-premium-primary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: var(--primary);
+    color: var(--primary-foreground);
+    font-family: 'Inter', 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: none;
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    box-shadow: 0 4px 12px rgba(59, 130, 246, 0.25);
+    position: relative;
+    overflow: hidden;
+    touch-action: manipulation;
+}
+
+.btn-premium-primary:hover {
+    background-color: #2563EB;
+    filter: brightness(1.1);
+    transform: translateY(-2px);
+    box-shadow: 0 0 20px rgba(59, 130, 246, 0.4), 0 6px 15px rgba(59, 130, 246, 0.3);
+}
+
+.btn-premium-primary:active {
+    transform: translateY(0);
+}
+
+.btn-premium-secondary {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    gap: 8px;
+    padding: 12px 20px;
+    background-color: transparent;
+    color: var(--primary);
+    font-family: 'Inter', 'Poppins', sans-serif;
+    font-weight: 600;
+    font-size: 0.95rem;
+    border: 2px solid var(--primary);
+    border-radius: 10px;
+    cursor: pointer;
+    transition: all 0.25s cubic-bezier(0.4, 0, 0.2, 1);
+    touch-action: manipulation;
+}
+
+.btn-premium-secondary:hover {
+    background-color: var(--accent);
+    filter: brightness(1.05);
+    color: var(--primary);
+}
+
+.btn-premium-secondary:active {
+    transform: translateY(0);
+}
+
+.btn-icon {
+    width: 18px;
+    height: 18px;
+    shrink: 0;
+    transition: transform 0.3s ease;
+}
+
+.btn-premium-primary:hover .btn-icon {
+    transform: rotate(-10deg) scale(1.1);
+}
+
+.btn-premium-secondary:hover .btn-icon {
+    transform: scale(1.1);
+}
+
+/* Ensure equal height on desktop */
+.btn-premium-primary,
+.btn-premium-secondary {
+    height: 46px;
+    line-height: 1;
+    white-space: nowrap;
+}
+
+/* Mobile responsive styles */
+@media (max-width: 640px) {
+    .dashboard-actions {
+        width: 100%;
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+        gap: 8px;
+    }
+
+    .btn-premium-primary,
+    .btn-premium-secondary {
+        width: 100%;
+        height: 42px;
+        padding: 8px 10px;
+        font-size: 0.8rem;
+        gap: 6px;
+        border-radius: 8px;
+        white-space: nowrap;
+    }
+
+    .btn-icon {
+        width: 15px;
+        height: 15px;
+    }
+}
